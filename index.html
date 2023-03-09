@@ -1,0 +1,56 @@
+<!DOCTYPE html> <html><head>
+        <title>Unit 4 Project Ms. Karen_This One</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: lightblue;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>What kind of cat are you?</h1>
+           
+        </div>
+        <div class="questions">
+            <h4>How old are you?</h4>
+             <input class="question1" placeholder="your age">
+            <p>          </p>
+            <img src="https://cdn5.vectorstock.com/i/1000x1000/36/84/young-girl-helps-an-old-woman-vector-18353684.jpg">
+            <h4>Do you prefer hot or cold weather?</h4>
+             <input class="question2" placeholder="hot or cold">
+            <img src="https://cdn5.vectorstock.com/i/1000x1000/85/94/hot-and-cold-weather-concept-vector-40588594.jpg">
+        </div>
+        <button class="button">Click me!</button>
+        <div class="result">
+            this is where the user will see their quiz result!
+            
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector(".button");
+
+button.onclick = function () {
+  var q1 = document.querySelector(".question1").value;
+  var q2 = document.querySelector(".question2").value;
+  console.log(q1);
+  console.log(q2);
+
+  if (q1 <= 50 && q2 === "hot" || "Hot") {
+    document.querySelector(".result").innerHTML = "You are " + q1 + " years old and you prefer " + q2 + " weather. This means you are a black cat.";
+  } else if (q1 <= 50 && q2 === "cold" || "Cold") {
+    document.querySelector(".result").innerHTML = "You are " + q1 + " years old and you like " + q2 + " weather. This means you are a grey cat!";
+  } else if (q1 > 50 && q2 === "cold" || "Cold") {
+    document.querySelector(".result").innerHTML = "You are " + q1 + " years old and you like " + q2 + " weather. This means you are a tabby cat!";
+  } else if (q1 > 50 && q2 === "hot" || "Hot") {
+    document.querySelector(".result").innerHTML = "You are " + q1 + " years old and you like " + q2 + " weather. This means you are a Siamese cat!";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsIm9uY2xpY2siLCJxMSIsInZhbHVlIiwicTIiLCJjb25zb2xlIiwibG9nIiwiaW5uZXJIVE1MIl0sIm1hcHBpbmdzIjoiQUFDQSxJQUFJQSxNQUFNLEdBQUNDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFYOztBQUVBRixNQUFNLENBQUNHLE9BQVAsR0FBaUIsWUFBVztBQUM1QixNQUFJQyxFQUFFLEdBQUNILFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixZQUF2QixFQUFxQ0csS0FBNUM7QUFDQSxNQUFJQyxFQUFFLEdBQUNMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixZQUF2QixFQUFxQ0csS0FBNUM7QUFDSUUsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlKLEVBQVo7QUFDQUcsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlGLEVBQVo7O0FBQ0gsTUFBSUYsRUFBRSxJQUFJLEVBQU4sSUFBWUUsRUFBRSxLQUFLLEtBQW5CLElBQTBCLEtBQTlCLEVBQXFDO0FBQ2xDTCxJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NPLFNBQWxDLEdBQTRDLGFBQWFMLEVBQWIsR0FBa0IsNEJBQWxCLEdBQWlERSxFQUFqRCxHQUFzRCwyQ0FBbEc7QUFDQyxHQUZKLE1BR1EsSUFBSUYsRUFBRSxJQUFJLEVBQU4sSUFBWUUsRUFBRSxLQUFLLE1BQW5CLElBQTJCLE1BQS9CLEVBQXVDO0FBQzVDTCxJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NPLFNBQWxDLEdBQTRDLGFBQWFMLEVBQWIsR0FBa0IsMEJBQWxCLEdBQStDRSxFQUEvQyxHQUFvRCwwQ0FBaEc7QUFDQyxHQUZJLE1BR0EsSUFBSUYsRUFBRSxHQUFHLEVBQUwsSUFBV0UsRUFBRSxLQUFLLE1BQWxCLElBQTBCLE1BQTlCLEVBQXNDO0FBQzNDTCxJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NPLFNBQWxDLEdBQTRDLGFBQWFMLEVBQWIsR0FBa0IsMEJBQWxCLEdBQStDRSxFQUEvQyxHQUFvRCwyQ0FBaEc7QUFDQyxHQUZJLE1BR0MsSUFBSUYsRUFBRSxHQUFHLEVBQUwsSUFBV0UsRUFBRSxLQUFLLEtBQWxCLElBQXlCLEtBQTdCLEVBQW9DO0FBQzFDTCxJQUFBQSxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NPLFNBQWxDLEdBQTRDLGFBQWFMLEVBQWIsR0FBa0IsMEJBQWxCLEdBQStDRSxFQUEvQyxHQUFvRCw2Q0FBaEc7QUFDQztBQUNKLENBakJEIiwic291cmNlc0NvbnRlbnQiOlsiXG5sZXQgYnV0dG9uPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuYnV0dG9uXCIpO1xuXG5idXR0b24ub25jbGljayA9IGZ1bmN0aW9uKCkge1xubGV0IHExPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24xXCIpLnZhbHVlO1xubGV0IHEyPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24yXCIpLnZhbHVlO1xuICAgIGNvbnNvbGUubG9nKHExKTtcbiAgICBjb25zb2xlLmxvZyhxMik7XG4gaWYgKHExIDw9IDUwICYmIHEyID09PSBcImhvdFwifHxcIkhvdFwiKSB7XG4gICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MPVwiWW91IGFyZSBcIiArIHExICsgXCIgeWVhcnMgb2xkIGFuZCB5b3UgcHJlZmVyIFwiICsgcTIgKyBcIiB3ZWF0aGVyLiBUaGlzIG1lYW5zIHlvdSBhcmUgYSBibGFjayBjYXQuXCI7XG4gICAgfSAgICBcbiAgICBlbHNlIGlmIChxMSA8PSA1MCAmJiBxMiA9PT0gXCJjb2xkXCJ8fFwiQ29sZFwiKSB7XG4gICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MPVwiWW91IGFyZSBcIiArIHExICsgXCIgeWVhcnMgb2xkIGFuZCB5b3UgbGlrZSBcIiArIHEyICsgXCIgd2VhdGhlci4gVGhpcyBtZWFucyB5b3UgYXJlIGEgZ3JleSBjYXQhXCI7XG4gICAgfSAgXG4gICAgZWxzZSBpZiAocTEgPiA1MCAmJiBxMiA9PT0gXCJjb2xkXCJ8fFwiQ29sZFwiKSB7XG4gICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MPVwiWW91IGFyZSBcIiArIHExICsgXCIgeWVhcnMgb2xkIGFuZCB5b3UgbGlrZSBcIiArIHEyICsgXCIgd2VhdGhlci4gVGhpcyBtZWFucyB5b3UgYXJlIGEgdGFiYnkgY2F0IVwiO1xuICAgIH0gIFxuICAgICBlbHNlIGlmIChxMSA+IDUwICYmIHEyID09PSBcImhvdFwifHxcIkhvdFwiKSB7XG4gICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIikuaW5uZXJIVE1MPVwiWW91IGFyZSBcIiArIHExICsgXCIgeWVhcnMgb2xkIGFuZCB5b3UgbGlrZSBcIiArIHEyICsgXCIgd2VhdGhlci4gVGhpcyBtZWFucyB5b3UgYXJlIGEgU2lhbWVzZSBjYXQhXCI7XG4gICAgfSAgXG59O1xuIl19</script></body></html>
